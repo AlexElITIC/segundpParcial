@@ -7,6 +7,7 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('music-book',{path:'/'});
 });
 
 export default Router;

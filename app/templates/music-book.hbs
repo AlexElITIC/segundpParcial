@@ -1,0 +1,13 @@
+<form {{action 'createBook' on="submit"}}>
+  titulo: {{input type="text" value=title}} <br>
+  precio: {{input type="text" value=price}} <br>
+  url: {{input type="text" value=url}} <br>
+  <button>crear</button>
+</form>
+
+{{#each model as |book|}}
+{{mini-card title=book.title price=book.price url=book.img_url
+onDelete=(action 'deleteBook' book)
+onUpdate=(action 'updateBook' book)
+}}
+{{/each}}

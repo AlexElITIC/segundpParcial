@@ -1,0 +1,8 @@
+{{#if (has-block)}}
+{{yield}}
+{{else}}
+{{input type="text" value=title}}
+{{input type="text" value=price}}
+{{input type="text" value=url}} <button {{action 'delete'}}>delete</button>
+<button {{action 'update'}}>update</button>
+{{/if}}
